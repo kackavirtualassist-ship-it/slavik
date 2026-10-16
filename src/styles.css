@@ -61,6 +61,63 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Presentation design tokens (Truhlářství Slavík proposals) */
+@theme {
+  --font-serif1: "Cormorant Garamond", Georgia, serif;
+  --font-sans1: "Karla", system-ui, sans-serif;
+  --font-display2: "Archivo", system-ui, sans-serif;
+  --font-sans2: "Work Sans", system-ui, sans-serif;
+  --font-sans3: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sw: "Work Sans", system-ui, sans-serif;
+
+  /* Návrh 1 — Přírodní řemeslo */
+  --color-d1-cream: #f5f1e9;
+  --color-d1-sand: #ded2bf;
+  --color-d1-brown: #352b24;
+  --color-d1-olive: #68715a;
+  --color-d1-green: #2f5a3a;
+
+  /* Návrh 2 — Tmavá elegance */
+  --color-d2-coal: #191918;
+  --color-d2-anthracite: #262624;
+  --color-d2-white: #f3efe7;
+  --color-d2-bronze: #b89970;
+  --color-d2-muted: #a9a59c;
+
+  /* Návrh 3 — Moderní portfolio */
+  --color-d3-white: #fafaf7;
+  --color-d3-gray: #eeefea;
+  --color-d3-graphite: #27302b;
+  --color-d3-green: #526555;
+  --color-d3-muted: #5d665f;
+
+  /* Prezentační pomůcky */
+  --color-sw-bg: #1c1c1b;
+  --color-sw-fg: #f4f2ee;
+  --color-sw-muted: #b9b6af;
+  --color-sw-border: #3a3a38;
+  --color-lb-bg: #0e0e0d;
+  --color-lb-ui: #ffffff;
+  --color-hub-bg: #efece6;
+  --color-hub-fg: #1f1d1a;
+  --color-hub-muted: #625d55;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
