@@ -43,7 +43,7 @@ function Design2() {
         <header className="relative z-10">
           <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-5 md:px-10">
             <a href="#top" className={focus}>
-              <img src={LOGO_TRANSPARENT_URL} alt={BRAND} className="h-20 w-auto drop-shadow-[0_0_10px_rgba(243,239,231,0.85)] md:h-28" />
+              <img src={LOGO_TRANSPARENT_URL} alt={BRAND} className="h-24 w-auto drop-shadow-[0_0_10px_rgba(243,239,231,0.85)] md:h-36" />
             </a>
             <nav aria-label="Hlavní" className="hidden gap-10 text-xs uppercase tracking-[0.2em] md:flex">
               {[["#nabidka", "Co děláme"], ["#realizace", "Realizace"], ["#pristup", "Přístup"], ["#poptavka", "Poptávka"]].map(([h, l]) => (
