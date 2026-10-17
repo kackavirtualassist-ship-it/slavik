@@ -50,6 +50,7 @@ function Lightbox({
   }, [onClose, prev, next]);
 
   const p = photos[index];
+  if (!p) return null;
   const btn =
     "flex h-12 w-12 items-center justify-center rounded-full bg-lb-ui/15 text-lb-ui text-2xl transition hover:bg-lb-ui/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lb-ui";
 
@@ -60,10 +61,10 @@ function Lightbox({
       aria-label={`Fotografie ${index + 1} z ${n}: ${p.title}`}
       className="fixed inset-0 z-[100] flex flex-col bg-lb-bg/95 motion-safe:animate-in motion-safe:fade-in"
       onClick={(e) => e.target === e.currentTarget && onClose()}
-      onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
+      onTouchStart={(e) => (touchX.current = e.touches[0]?.clientX ?? null)}
       onTouchEnd={(e) => {
         if (touchX.current === null) return;
-        const dx = e.changedTouches[0].clientX - touchX.current;
+        const dx = (e.changedTouches[0]?.clientX ?? touchX.current) - touchX.current;
         if (Math.abs(dx) > 40) (dx > 0 ? prev : next)();
         touchX.current = null;
       }}

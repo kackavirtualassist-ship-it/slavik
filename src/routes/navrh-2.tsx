@@ -24,12 +24,15 @@ const ORDER: Photo[] = [PHOTOS.epoxyStul, PHOTOS.platek, PHOTOS.stoly, PHOTOS.ep
 
 function Design2() {
   const lb = useLightbox(ORDER);
-  const Tile = ({ i, className }: { i: number; className: string }) => (
-    <button onClick={() => lb.open(i)} className={`group relative block overflow-hidden ${className} ${focus}`} aria-label={`Zvětšit: ${ORDER[i].title}`}>
-      <img src={ORDER[i].src} alt={ORDER[i].alt} loading="lazy" className="h-full w-full object-cover transition duration-1000 motion-safe:group-hover:scale-[1.03]" />
-      <span className="absolute bottom-0 left-0 bg-d2-coal/80 px-4 py-2 text-xs uppercase tracking-[0.2em] text-d2-white">{ORDER[i].title}</span>
+  const Tile = ({ i, className }: { i: number; className: string }) => {
+    const ph = ORDER[i]!;
+    return (
+    <button onClick={() => lb.open(i)} className={`group relative block overflow-hidden ${className} ${focus}`} aria-label={`Zvětšit: ${ph.title}`}>
+      <img src={ph.src} alt={ph.alt} loading="lazy" className="h-full w-full object-cover transition duration-1000 motion-safe:group-hover:scale-[1.03]" />
+      <span className="absolute bottom-0 left-0 bg-d2-coal/80 px-4 py-2 text-xs uppercase tracking-[0.2em] text-d2-white">{ph.title}</span>
     </button>
   );
+  };
 
   return (
     <div className="bg-d2-coal font-sans2 text-d2-white">
