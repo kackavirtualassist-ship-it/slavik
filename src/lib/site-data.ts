@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.jpg.asset.json";
+import logoTransparent from "@/assets/logo-transparent.png.asset.json";
 import epoxyDesky from "@/assets/epoxy-desky.jpg.asset.json";
 import epoxyRecepce from "@/assets/epoxy-recepce.jpg.asset.json";
 import epoxyStul from "@/assets/epoxy-stul-sedy.jpg.asset.json";
@@ -8,6 +9,7 @@ import postel from "@/assets/postel-dub.jpg.asset.json";
 import stoly from "@/assets/stoly-umyvadlo.jpg.asset.json";
 
 export const LOGO_URL = logo.url;
+export const LOGO_TRANSPARENT_URL = logoTransparent.url;
 export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=100089360948596";
 export const BRAND = "Truhlářství Slavík";
 
