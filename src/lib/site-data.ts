@@ -9,7 +9,7 @@ import postel from "@/assets/postel-dub.jpg.asset.json";
 import stoly from "@/assets/stoly-umyvadlo.jpg.asset.json";
 
 export const LOGO_URL = logo.url;
-export const LOGO_TRANSPARENT_URL = logoTransparent.url;
+export const LOGO_TRANSPARENT_URL: string = logoTransparent.url;
 export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=100089360948596";
 export const BRAND = "Truhlářství Slavík";
 
