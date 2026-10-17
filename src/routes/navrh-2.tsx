@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { DesignSwitcher } from "@/components/presentation/DesignSwitcher";
 import { InquiryForm } from "@/components/presentation/InquiryForm";
 import { useLightbox } from "@/components/presentation/Lightbox";
-import { BRAND, FACEBOOK_URL, LOGO_URL, PHOTOS, PROCESS, PROCESS_NOTE, SERVICES, type Photo } from "@/lib/site-data";
+import { BRAND, FACEBOOK_URL, LOGO_TRANSPARENT_URL, LOGO_URL, PHOTOS, PROCESS, PROCESS_NOTE, SERVICES, type Photo } from "@/lib/site-data";
 
 export const Route = createFileRoute("/navrh-2")({
   head: () => ({
@@ -42,11 +42,11 @@ function Design2() {
         <div className="absolute inset-0 bg-gradient-to-t from-d2-coal via-d2-coal/70 to-d2-coal/30" />
         <header className="relative z-10">
           <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-5 md:px-10">
-            <a href="#top" className={`bg-d2-white p-2 ${focus}`}>
-              <img src={LOGO_URL} alt={BRAND} className="h-12 w-auto md:h-14" />
+            <a href="#top" className={focus}>
+              <img src={LOGO_TRANSPARENT_URL} alt={BRAND} className="h-24 w-auto drop-shadow-[0_0_10px_rgba(243,239,231,0.85)] md:h-36" />
             </a>
             <nav aria-label="Hlavní" className="hidden gap-10 text-xs uppercase tracking-[0.2em] md:flex">
-              {[["#realizace", "Realizace"], ["#nabidka", "Nabídka"], ["#pristup", "Přístup"], ["#poptavka", "Poptávka"]].map(([h, l]) => (
+              {[["#nabidka", "Co děláme"], ["#realizace", "Realizace"], ["#pristup", "Přístup"], ["#poptavka", "Poptávka"]].map(([h, l]) => (
                 <a key={h} href={h} className={`py-2 hover:text-d2-bronze ${focus}`}>{l}</a>
               ))}
             </nav>
@@ -54,7 +54,7 @@ function Design2() {
         </header>
         <div className="relative z-10 mx-auto mt-auto w-full max-w-[1500px] px-5 pb-16 md:px-10 md:pb-24">
           <p className="text-xs uppercase tracking-[0.3em] text-d2-bronze">{BRAND} · nábytek z masivu na zakázku</p>
-          <h1 className="mt-6 max-w-5xl font-display2 text-5xl font-bold leading-[0.95] tracking-tight md:text-8xl motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-6 motion-safe:duration-1000">
+          <h1 className="mt-6 max-w-5xl font-display2 text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-6 motion-safe:duration-1000">
             Řemeslo, které vynikne v každém detailu.
           </h1>
           <div className="mt-10 flex flex-wrap gap-4">
@@ -65,27 +65,6 @@ function Design2() {
       </section>
 
       <main>
-        {/* Realizace */}
-        <section id="realizace" className="mx-auto max-w-[1500px] scroll-mt-4 px-5 py-24 md:px-10">
-          <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
-            <h2 className="font-display2 text-4xl font-bold tracking-tight md:text-6xl">Realizace</h2>
-            <p className="max-w-sm text-sm text-d2-muted">Masiv, plátky s přírodní hranou i dřevo s epoxidem. Kliknutím fotografii zvětšíte.</p>
-          </div>
-          <div className="grid gap-4">
-            <Tile i={0} className="aspect-[4/5] md:aspect-[21/9]" />
-            <div className="grid gap-4 md:grid-cols-2">
-              <Tile i={1} className="aspect-[4/5]" />
-              <Tile i={2} className="aspect-[4/5]" />
-            </div>
-            <Tile i={3} className="aspect-[3/2] md:aspect-[21/9]" />
-            <div className="grid gap-4 md:grid-cols-3">
-              <Tile i={4} className="aspect-[4/3] md:col-span-2 md:aspect-auto md:h-full" />
-              <Tile i={5} className="aspect-[3/4]" />
-            </div>
-            <Tile i={6} className="aspect-[4/3] md:aspect-[21/9]" />
-          </div>
-        </section>
-
         {/* Nabídka */}
         <section id="nabidka" className="scroll-mt-4 bg-d2-anthracite py-24">
           <div className="mx-auto grid max-w-[1500px] gap-12 px-5 md:grid-cols-[1fr_2fr] md:px-10">
@@ -102,6 +81,27 @@ function Design2() {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        {/* Realizace */}
+        <section id="realizace" className="mx-auto max-w-[1500px] scroll-mt-4 px-5 py-24 md:px-10">
+          <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
+            <h2 className="font-display2 text-4xl font-bold tracking-tight md:text-6xl">Realizace</h2>
+            <p className="max-w-sm text-sm text-d2-muted">Masiv, desky s přírodní hranou i dřevo s epoxidem. Kliknutím fotografii zvětšíte.</p>
+          </div>
+          <div className="grid gap-4">
+            <Tile i={0} className="aspect-[4/5] md:aspect-[21/9]" />
+            <div className="grid gap-4 md:grid-cols-2">
+              <Tile i={1} className="aspect-[4/5]" />
+              <Tile i={2} className="aspect-[4/5]" />
+            </div>
+            <Tile i={3} className="aspect-[3/2] md:aspect-[21/9]" />
+            <div className="grid gap-4 md:grid-cols-3">
+              <Tile i={4} className="aspect-[4/3] md:col-span-2 md:aspect-auto md:h-full" />
+              <Tile i={5} className="aspect-[3/4]" />
+            </div>
+            <Tile i={6} className="aspect-[4/3] md:aspect-[21/9]" />
           </div>
         </section>
 
