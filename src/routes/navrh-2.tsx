@@ -38,9 +38,9 @@ function Design2() {
     <div className="bg-d2-coal font-sans2 text-d2-white">
       {/* Hero */}
       <section id="top" className="relative flex min-h-[100svh] flex-col overflow-hidden">
-        <img src={PHOTOS.epoxyRecepce.src} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full scale-110 object-cover blur-3xl brightness-[0.45]" />
-        <img src={PHOTOS.epoxyRecepce.src} alt={PHOTOS.epoxyRecepce.alt} className="absolute inset-0 h-full w-full object-contain [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-d2-coal via-d2-coal/60 to-d2-coal/25" />
+        <img src={PHOTOS.epoxyRecepce.src} alt={PHOTOS.epoxyRecepce.alt} className="absolute inset-0 h-full w-full object-cover object-top" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-d2-coal/85 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-d2-coal via-d2-coal/55 to-transparent" />
         <header className="relative z-10">
           <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-5 md:px-10">
             <a href="#top" className={focus}>
