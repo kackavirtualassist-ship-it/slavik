@@ -20,10 +20,10 @@ export const Route = createFileRoute("/navrh-1")({
 
 const focus = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-d1-brown";
 const nav = [
-  ["#nabidka", "Nabídka"],
-  ["#realizace", "Realizace"],
+  ["#nabidka", "Co nabízíme"],
+  ["#realizace", "Z naší dílny"],
+  ["#spoluprace", "Postup"],
   ["#o-nas", "O truhlářství"],
-  ["#spoluprace", "Spolupráce"],
   ["#kontakt", "Kontakt"],
 ] as const;
 
@@ -131,20 +131,6 @@ function Design1() {
           </div>
         </section>
 
-        {/* O nás */}
-        <section id="o-nas" className="mx-auto grid max-w-7xl scroll-mt-6 items-center gap-12 px-5 py-24 md:grid-cols-2 md:px-10">
-          <img src={PHOTOS.stoly.src} alt={PHOTOS.stoly.alt} loading="lazy" className="aspect-[4/5] w-full object-cover" />
-          <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-d1-olive">O truhlářství</p>
-            <h2 className="mt-4 font-serif1 text-4xl font-medium md:text-5xl">Každý kus vzniká na zakázku</h2>
-            <div className="mt-6 space-y-4 text-lg leading-relaxed">
-              <p>{BRAND} se věnuje výrobě nábytku z masivního dřeva. Pracujeme s tuzemskými i exotickými dřevinami a nebojíme se spojit dřevo s epoxidem.</p>
-              <p>Rádi se pustíme také do renovace starého nábytku, který má pro vás hodnotu.</p>
-            </div>
-            <img src={LOGO_URL} alt="" className="mt-10 h-20 w-auto mix-blend-multiply" />
-          </div>
-        </section>
-
         {/* Spolupráce */}
         <section id="spoluprace" className="scroll-mt-6 border-y border-d1-sand py-20">
           <div className="mx-auto max-w-7xl px-5 md:px-10">
@@ -160,6 +146,20 @@ function Design1() {
                 </li>
               ))}
             </ol>
+          </div>
+        </section>
+
+        {/* O nás */}
+        <section id="o-nas" className="mx-auto grid max-w-7xl scroll-mt-6 items-center gap-12 px-5 py-24 md:grid-cols-2 md:px-10">
+          <img src={PHOTOS.stoly.src} alt={PHOTOS.stoly.alt} loading="lazy" className="aspect-[4/5] w-full object-cover" />
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-d1-olive">O truhlářství</p>
+            <h2 className="mt-4 font-serif1 text-4xl font-medium md:text-5xl">Každý kus vzniká na zakázku</h2>
+            <div className="mt-6 space-y-4 text-lg leading-relaxed">
+              <p>{BRAND} se věnuje výrobě nábytku z masivního dřeva. Pracujeme s tuzemskými i exotickými dřevinami a nebojíme se spojit dřevo s epoxidem.</p>
+              <p>Rádi se pustíme také do renovace starého nábytku, který má pro vás hodnotu.</p>
+            </div>
+            <img src={LOGO_URL} alt="" className="mt-10 h-20 w-auto mix-blend-multiply" />
           </div>
         </section>
 
