@@ -60,7 +60,7 @@ function Design1() {
 
       <main id="top">
         {/* Hero */}
-        <section className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-12 md:px-10 md:py-24">
+        <section className="mx-auto grid max-w-7xl gap-12 px-5 pb-20 pt-8 md:grid-cols-12 md:px-10 md:pb-24 md:pt-12">
           <div className="md:col-span-5 md:self-center motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 motion-safe:duration-700">
             <p className="text-xs uppercase tracking-[0.25em] text-d1-olive">Zakázková výroba z masivního dřeva</p>
             <h1 className="mt-6 font-serif1 text-5xl font-medium leading-[1.05] md:text-7xl">
@@ -85,7 +85,7 @@ function Design1() {
         </section>
 
         {/* Nabídka */}
-        <section id="nabidka" className="mx-auto max-w-7xl scroll-mt-6 px-5 py-20 md:px-10">
+        <section id="nabidka" className="mx-auto max-w-7xl scroll-mt-6 px-5 py-24 md:px-10">
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-4">
               <p className="text-xs uppercase tracking-[0.25em] text-d1-olive">Nabídka</p>
@@ -104,7 +104,7 @@ function Design1() {
         </section>
 
         {/* Realizace */}
-        <section id="realizace" className="scroll-mt-6 bg-d1-sand/40 py-20">
+        <section id="realizace" className="scroll-mt-6 bg-d1-sand/40 py-24">
           <div className="mx-auto max-w-7xl px-5 md:px-10">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
@@ -132,7 +132,7 @@ function Design1() {
         </section>
 
         {/* Spolupráce */}
-        <section id="spoluprace" className="scroll-mt-6 border-y border-d1-sand py-20">
+        <section id="spoluprace" className="scroll-mt-6 border-y border-d1-sand py-24">
           <div className="mx-auto max-w-7xl px-5 md:px-10">
             <p className="text-xs uppercase tracking-[0.25em] text-d1-olive">Postup spolupráce</p>
             <h2 className="mt-4 font-serif1 text-4xl font-medium md:text-5xl">Od nápadu k hotovému kusu</h2>
