@@ -20,10 +20,10 @@ export const Route = createFileRoute("/navrh-1")({
 
 const focus = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-d1-brown";
 const nav = [
-  ["#nabidka", "Nabídka"],
-  ["#realizace", "Realizace"],
+  ["#nabidka", "Co nabízíme"],
+  ["#realizace", "Z naší dílny"],
+  ["#spoluprace", "Postup"],
   ["#o-nas", "O truhlářství"],
-  ["#spoluprace", "Spolupráce"],
   ["#kontakt", "Kontakt"],
 ] as const;
 
