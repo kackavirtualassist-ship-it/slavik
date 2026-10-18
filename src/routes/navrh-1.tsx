@@ -145,24 +145,6 @@ function Design1() {
           </div>
         </section>
 
-        {/* Spolupráce */}
-        <section id="spoluprace" className="scroll-mt-6 border-y border-d1-sand py-20">
-          <div className="mx-auto max-w-7xl px-5 md:px-10">
-            <p className="text-xs uppercase tracking-[0.25em] text-d1-olive">Postup spolupráce</p>
-            <h2 className="mt-4 font-serif1 text-4xl font-medium md:text-5xl">Od nápadu k hotovému kusu</h2>
-            <p className="mt-3 text-sm italic text-d1-olive">{PROCESS_NOTE}</p>
-            <ol className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-              {PROCESS.map((p, i) => (
-                <li key={p.title} className="border-l border-d1-olive pl-5">
-                  <span className="font-serif1 text-4xl text-d1-olive">{i + 1}</span>
-                  <h3 className="mt-3 font-serif1 text-2xl font-medium">{p.title}</h3>
-                  <p className="mt-2 leading-relaxed">{p.text}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
         {/* Kontakt */}
         <section id="kontakt" className="mx-auto grid max-w-7xl scroll-mt-6 gap-14 px-5 py-24 md:grid-cols-12 md:px-10">
           <div className="md:col-span-5">
