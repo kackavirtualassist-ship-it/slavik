@@ -45,7 +45,7 @@ function ProposalFour() {
   const [service, setService] = useState<number | null>(0);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const lightbox = useLightbox(FOUR_PROJECTS);
-  const photo = FOUR_PROJECTS[project] ?? FOUR_PROJECTS[0];
+  const photo = FOUR_PROJECTS[project] ?? PHOTOS.epoxyRecepce;
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
