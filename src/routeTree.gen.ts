@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as Navrh1RouteImport } from './routes/navrh-1'
 import { Route as Navrh2RouteImport } from './routes/navrh-2'
 import { Route as Navrh3RouteImport } from './routes/navrh-3'
+import { Route as Navrh4RouteImport } from './routes/navrh-4'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +35,25 @@ const Navrh3Route = Navrh3RouteImport.update({
   path: '/navrh-3',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Navrh4Route = Navrh4RouteImport.update({
+  id: '/navrh-4',
+  path: '/navrh-4',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/navrh-1': typeof Navrh1Route
   '/navrh-2': typeof Navrh2Route
   '/navrh-3': typeof Navrh3Route
+  '/navrh-4': typeof Navrh4Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/navrh-1': typeof Navrh1Route
   '/navrh-2': typeof Navrh2Route
   '/navrh-3': typeof Navrh3Route
+  '/navrh-4': typeof Navrh4Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,14 @@ export interface FileRoutesById {
   '/navrh-1': typeof Navrh1Route
   '/navrh-2': typeof Navrh2Route
   '/navrh-3': typeof Navrh3Route
+  '/navrh-4': typeof Navrh4Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/navrh-1' | '/navrh-2' | '/navrh-3'
+  fullPaths: '/' | '/navrh-1' | '/navrh-2' | '/navrh-3' | '/navrh-4'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/navrh-1' | '/navrh-2' | '/navrh-3'
-  id: '__root__' | '/' | '/navrh-1' | '/navrh-2' | '/navrh-3'
+  to: '/' | '/navrh-1' | '/navrh-2' | '/navrh-3' | '/navrh-4'
+  id: '__root__' | '/' | '/navrh-1' | '/navrh-2' | '/navrh-3' | '/navrh-4'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +76,7 @@ export interface RootRouteChildren {
   Navrh1Route: typeof Navrh1Route
   Navrh2Route: typeof Navrh2Route
   Navrh3Route: typeof Navrh3Route
+  Navrh4Route: typeof Navrh4Route
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +109,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Navrh3RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/navrh-4': {
+      id: '/navrh-4'
+      path: '/navrh-4'
+      fullPath: '/navrh-4'
+      preLoaderRoute: typeof Navrh4RouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +124,7 @@ const rootRouteChildren: RootRouteChildren = {
   Navrh1Route: Navrh1Route,
   Navrh2Route: Navrh2Route,
   Navrh3Route: Navrh3Route,
+  Navrh4Route: Navrh4Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
