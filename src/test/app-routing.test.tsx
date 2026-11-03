@@ -14,4 +14,12 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+  it("keeps the selected design as the home page", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    expect(router.matchRoutes("/").at(-1)?.routeId).toBe("/");
+  });
+  it.each(["/navrh-1", "/navrh-3", "/navrh-4"])("does not retain the discarded proposal %s", (path) => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    expect(router.routesByPath).not.toHaveProperty(path);
+  });
 });
