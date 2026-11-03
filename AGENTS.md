@@ -9,6 +9,6 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Keep each proposal in its own leaf route and scope proposal-specific styling to its wrapper so new concepts do not alter existing designs.
-- Reuse the verified asset registry for proposal imagery; keep proposal-specific ordering and captions separate to avoid changing earlier proposals.
-- The fourth proposal uses a client-only presentation form with a pure validation module; no messages are sent or persisted because this is a design demonstration.
+- Render the selected website through a shared presentation component on the home route; redirect the legacy selected-proposal URL home so existing links remain usable.
+- Reuse the verified asset registry for all website imagery to retain the client's original photographs.
+- Keep the inquiry form client-only without sending or persisting messages until real contact details and delivery requirements are supplied.

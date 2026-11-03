@@ -78,11 +78,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Truhlářství Slavík — návrhy webu" },
-      { name: "description", content: "Tři návrhy webu pro Truhlářství Slavík." },
+      { title: "Truhlářství Slavík — nábytek z masivu na zakázku" },
+      { name: "description", content: "Zakázková výroba nábytku z masivního dřeva, tuzemské a exotické dřeviny, dřevo s epoxidem a renovace nábytku." },
       
-      { property: "og:title", content: "Truhlářství Slavík — návrhy webu" },
-      { property: "og:description", content: "Tři návrhy webu pro Truhlářství Slavík." },
+      { property: "og:title", content: "Truhlářství Slavík — nábytek z masivu na zakázku" },
+      { property: "og:description", content: "Skutečné realizace zakázkového nábytku z masivu a dřeva s epoxidem." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       
@@ -96,7 +96,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Karla:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Work+Sans:wght@400;500;600&display=swap",
       },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
