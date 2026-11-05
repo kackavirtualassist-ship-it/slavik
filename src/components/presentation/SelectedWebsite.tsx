@@ -1,23 +1,10 @@
 import { InquiryForm } from "@/components/presentation/InquiryForm";
-import { useLightbox } from "@/components/presentation/Lightbox";
-import { BRAND, FACEBOOK_URL, LOGO_TRANSPARENT_URL, LOGO_URL, PHOTOS, PROCESS, PROCESS_NOTE, SERVICES, type Photo } from "@/lib/site-data";
+import { PortfolioGallery } from "@/components/presentation/PortfolioGallery";
+import { BRAND, FACEBOOK_URL, LOGO_TRANSPARENT_URL, LOGO_URL, PHOTOS, PROCESS, PROCESS_NOTE, SERVICES } from "@/lib/site-data";
 
 const focus = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-d2-bronze";
-// Order defines the wide / split rhythm
-const ORDER: Photo[] = [PHOTOS.epoxyStul, PHOTOS.platek, PHOTOS.stoly, PHOTOS.epoxyDesky, PHOTOS.postel, PHOTOS.stolek, PHOTOS.epoxyRecepce];
 
 export function SelectedWebsite() {
-  const lb = useLightbox(ORDER);
-  const Tile = ({ i, className }: { i: number; className: string }) => {
-    const ph = ORDER[i];
-    if (!ph) return null;
-    return (
-    <button onClick={() => lb.open(i)} className={`group relative block overflow-hidden ${className} ${focus}`} aria-label={`Zvětšit: ${ph.title}`}>
-      <img src={ph.src} alt={ph.alt} loading="lazy" className="h-full w-full object-cover transition duration-1000 motion-safe:group-hover:scale-[1.03]" />
-      <span className="absolute bottom-0 left-0 bg-d2-coal/80 px-4 py-2 text-xs uppercase tracking-[0.2em] text-d2-white">{ph.title}</span>
-    </button>
-  );
-  };
 
   return (
     <div className="bg-d2-coal font-sans2 text-d2-white">
@@ -75,19 +62,7 @@ export function SelectedWebsite() {
             <h2 className="font-display2 text-4xl font-bold tracking-tight md:text-6xl">Realizace</h2>
             <p className="max-w-sm text-sm text-d2-muted">Kuchyně, vestavěné skříně, nábytek z masivu i renovace. Prohlédněte si ukázky naší práce.</p>
           </div>
-          <div className="grid gap-4">
-            <Tile i={0} className="aspect-[4/5] md:aspect-[21/9]" />
-            <div className="grid gap-4 md:grid-cols-2">
-              <Tile i={1} className="aspect-[4/5]" />
-              <Tile i={2} className="aspect-[4/5]" />
-            </div>
-            <Tile i={3} className="aspect-[3/2] md:aspect-[21/9]" />
-            <div className="grid gap-4 md:grid-cols-3">
-              <Tile i={4} className="aspect-[4/3] md:col-span-2 md:aspect-auto md:h-full" />
-              <Tile i={5} className="aspect-[3/4]" />
-            </div>
-            <Tile i={6} className="aspect-[4/3] md:aspect-[21/9]" />
-          </div>
+          <PortfolioGallery />
         </section>
 
         {/* Přístup */}
@@ -158,7 +133,6 @@ export function SelectedWebsite() {
           <p className="text-xs text-d2-muted">© {BRAND}</p>
         </div>
       </footer>
-      {lb.node}
     </div>
   );
 }
