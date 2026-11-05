@@ -38,7 +38,7 @@ export function SelectedWebsite() {
           </div>
         </header>
         <div className="relative z-10 mx-auto mt-auto w-full max-w-[1500px] px-5 pb-16 md:px-10 md:pb-24">
-          <p className="text-xs uppercase tracking-[0.3em] text-d2-bronze">{BRAND} · nábytek z masivu na zakázku</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-d2-bronze">{BRAND} · kuchyně a nábytek na míru</p>
           <h1 className="mt-6 max-w-5xl font-display2 text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-6 motion-safe:duration-1000">
             Řemeslo, které vynikne v každém detailu.
           </h1>
@@ -73,7 +73,7 @@ export function SelectedWebsite() {
         <section id="realizace" className="mx-auto max-w-[1500px] scroll-mt-4 px-5 py-24 md:px-10">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
             <h2 className="font-display2 text-4xl font-bold tracking-tight md:text-6xl">Realizace</h2>
-            <p className="max-w-sm text-sm text-d2-muted">Masiv, desky s přírodní hranou i dřevo s epoxidem. Kliknutím fotografii zvětšíte.</p>
+            <p className="max-w-sm text-sm text-d2-muted">Kuchyně, vestavěné skříně, nábytek z masivu i renovace. Prohlédněte si ukázky naší práce.</p>
           </div>
           <div className="grid gap-4">
             <Tile i={0} className="aspect-[4/5] md:aspect-[21/9]" />
@@ -100,6 +100,7 @@ export function SelectedWebsite() {
             <div className="space-y-5 self-end text-lg leading-relaxed text-d2-muted">
               <p>Pracujeme s masivem tuzemských i exotických dřevin. Kresbu, praskliny a přírodní hranu necháváme vyniknout, epoxidem je umíme doplnit.</p>
               <p>Starý nábytek nevyhazujeme — rádi ho renovujeme.</p>
+              <p>Vyrábíme také kuchyňské linky, vestavěné skříně a další nábytek na míru.</p>
             </div>
           </div>
           <div className="mt-20">

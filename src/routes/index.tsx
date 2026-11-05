@@ -3,10 +3,10 @@ import { SelectedWebsite } from "@/components/presentation/SelectedWebsite";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: "Truhlářství Slavík — nábytek z masivu na zakázku" },
-    { name: "description", content: "Zakázkový nábytek z masivního dřeva, tuzemské i exotické dřeviny, dřevo s epoxidem a renovace. Prohlédněte si realizace Truhlářství Slavík." },
-    { property: "og:title", content: "Truhlářství Slavík — nábytek z masivu na zakázku" },
-    { property: "og:description", content: "Skutečné realizace nábytku z masivu a dřeva s epoxidem od Truhlářství Slavík." },
+    { title: "Truhlářství Slavík — kuchyně a nábytek na míru" },
+    { name: "description", content: "Kuchyně a kuchyňské linky na míru, vestavěné skříně, nábytek na míru, masiv z tuzemských i exotických dřevin, epoxid a renovace starého nábytku. Prohlédněte si realizace Truhlářství Slavík." },
+    { property: "og:title", content: "Truhlářství Slavík — kuchyně a nábytek na míru" },
+    { property: "og:description", content: "Skutečné realizace Truhlářství Slavík: kuchyně, vestavěné skříně, nábytek na míru, masiv, epoxid a renovace." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
   ] }),

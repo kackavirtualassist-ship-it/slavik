@@ -42,9 +42,10 @@ export const GALLERY: Photo[] = [
 ];
 
 export const SERVICES = [
-  { title: "Zakázková výroba nábytku", text: "Nábytek z masivního dřeva podle vašeho prostoru, rozměrů a představ." },
-  { title: "Tuzemské dřeviny", text: "Výrobky z domácího dřeva s jeho přirozenou kresbou." },
-  { title: "Exotické dřeviny", text: "Kusy z exotického dřeva pro výraznější charakter." },
+  { title: "Kuchyňské linky na míru", text: "Kuchyně podle vašeho prostoru, potřeb a představ." },
+  { title: "Vestavěné skříně", text: "Úložné prostory na míru dispozici vašeho interiéru." },
+  { title: "Další nábytek na míru", text: "Zakázková výroba nábytku podle požadovaných rozměrů a využití." },
+  { title: "Nábytek z masivu", text: "Výroba z tuzemských i exotických dřevin s důrazem na přirozenou kresbu dřeva." },
   { title: "Dřevo s epoxidem", text: "Stoly a desky, kde masiv doplňuje barevná epoxidová výplň." },
   { title: "Renovace starého nábytku", text: "Oprava a obnova nábytku, který si zaslouží další život." },
 ];
