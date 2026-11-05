@@ -32,7 +32,7 @@ export function PortfolioGallery() {
             <section key={group.id} aria-labelledby={`portfolio-${group.id}`}>
               <h3 id={`portfolio-${group.id}`} className="mb-8 border-t border-d2-white/15 pt-6 font-display2 text-2xl font-semibold text-d2-bronze md:text-3xl">{group.title}</h3>
               <div className="grid gap-4">
-                {rows.map(row => row.length === 1 ? tile(row[0], true) : (
+                {rows.map(row => row.length === 1 ? row.map(photo => tile(photo, true)) : (
                   <div key={row.map(photo => photo.id).join("-")} className="grid gap-4 md:grid-cols-2">
                     {row.map(photo => tile(photo))}
                   </div>
