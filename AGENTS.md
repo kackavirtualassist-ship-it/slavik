@@ -13,3 +13,4 @@
 - Reuse the verified asset registry for all website imagery to retain the client's original photographs.
 - Keep the inquiry form client-only without sending or persisting messages until real contact details and delivery requirements are supplied.
 - Define grouped portfolio records in a browser-safe registry consumed by a shared gallery and one lightbox; store any confirmed comparison relationships explicitly rather than deriving them from photo order.
+- Keep the home portfolio to category covers; open paginated thumbnails in an accessible dialog with a nested shared lightbox so the page stays short while every photograph remains accessible.
