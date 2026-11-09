@@ -15,7 +15,7 @@ describe("Verified portfolio records", () => {
     expect(PORTFOLIO_PHOTOS).toHaveLength(57);
   });
   it("has no unsupported or empty kitchen and renovation groups", () => {
-    expect(PORTFOLIO_GROUPS.map(group => group.id)).toEqual(["interier", "masiv"]);
+    expect(PORTFOLIO_GROUPS.map(group => group.id)).toEqual(["skrine", "schodiste", "koupelny", "dvere", "postele", "masiv"]);
     expect(PORTFOLIO_GROUPS.every(group => group.photos.length > 0)).toBe(true);
   });
   it("keeps the supplied before and after labels without inferring pairs", () => {

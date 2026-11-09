@@ -106,15 +106,25 @@ export const NEW_PHOTOS: PortfolioPhoto[] = [
   { id: "new-50", src: photo50.url, title: "Detail dveřního kování", alt: "Detail černého kovového závěsu dřevěných dveří", category: "masiv", w: 1200, h: 1600 },
 ];
 
-const INTERIOR_IDS = new Set(["new-01", "new-02", "new-03", "new-04", "new-05", "new-06", "new-07", "new-11", "new-12", "new-13", "new-16", "new-17", "new-18", "new-19", "new-32", "new-36", "new-37"]);
-
 export const ORIGINAL_PHOTOS: PortfolioPhoto[] = [PHOTOS.epoxyStul, PHOTOS.platek, PHOTOS.stoly, PHOTOS.epoxyDesky, PHOTOS.postel, PHOTOS.stolek, PHOTOS.epoxyRecepce].map((photo, i) => ({ ...photo, id: `original-${i}` }));
 
 // Unconfirmed before/after relationships remain standalone photographs.
 // No kitchen, renovation or visualization groups are inferred from appearance.
+const allPhotos = [...NEW_PHOTOS, ...ORIGINAL_PHOTOS];
+const group = (id: string, title: string, ids: string[]): PortfolioGroup => ({
+  id, title, photos: ids.flatMap(photoId => {
+    const photo = allPhotos.find(item => item.id === photoId);
+    return photo ? [photo] : [];
+  }),
+});
+
 export const PORTFOLIO_GROUPS: PortfolioGroup[] = [
-  { id: "interier", title: "Vestavěné skříně a další nábytek", photos: NEW_PHOTOS.filter(photo => INTERIOR_IDS.has(photo.id)) },
-  { id: "masiv", title: "Masiv a epoxid", photos: [...NEW_PHOTOS.filter(photo => !INTERIOR_IDS.has(photo.id)), ...ORIGINAL_PHOTOS] },
+  group("skrine", "Vestavěné skříně", ["new-13", "new-11", "new-12"]),
+  group("schodiste", "Schodiště a příčky", ["new-04", "new-01", "new-02", "new-03", "new-05", "new-06", "new-07", "new-16", "new-17", "new-18", "new-19", "new-32", "new-36", "new-37"]),
+  group("koupelny", "Koupelnový nábytek", ["new-21", "new-20", "new-22", "new-23", "new-24", "new-26", "original-2"]),
+  group("dvere", "Dveře z masivu", ["new-27", "new-25", "new-28", "new-29", "new-31", "new-34", "new-35", "new-46", "new-47", "new-48", "new-50"]),
+  group("postele", "Postele a noční stolky", ["original-4", "new-14", "new-15", "new-43", "new-44", "new-45"]),
+  group("masiv", "Stoly, desky a epoxid", ["original-6", "original-0", "original-1", "original-3", "original-5", "new-08", "new-09", "new-10", "new-30", "new-33", "new-38", "new-39", "new-40", "new-41", "new-42", "new-49"]),
 ];
 
 export const PORTFOLIO_PHOTOS = PORTFOLIO_GROUPS.flatMap(group => group.photos);

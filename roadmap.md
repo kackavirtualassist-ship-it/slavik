@@ -4,7 +4,11 @@
 - [x] Ověřit stránku, galerii, ukázkový formulář a připravené soubory.
 
 # Rozšíření nabídky a realizací
-- [ ] Doplnit šest služeb, úvodní popisek, přístup a popis pro vyhledávače bez změny úvodu.
-- [ ] Zařadit skutečné nové fotografie do skupin a zachovat původní realizace.
-- [ ] Ověřit označení dvojic před/po s klientkou a zobrazit potvrzená srovnání.
-- [ ] Ověřit galerii, telefonní i počítačové rozložení a zachovaný formulář.
+- [x] Doplnit šest služeb, úvodní popisek, přístup a popis pro vyhledávače bez změny úvodu.
+- [x] Zařadit skutečné nové fotografie do skupin a zachovat původní realizace.
+- [ ] Ověřit označení dvojic před/po s klientkou a zobrazit potvrzená srovnání — čeká na potvrzení příslušnosti fotografií klientkou.
+- [x] Ověřit galerii, telefonní i počítačové rozložení a zachovaný formulář.
+
+# Přehledné portfolio
+- [x] Nahradit dlouhý výpis malými tematickými náhledy a rozklikávacími galeriemi.
+- [x] Ověřit přístup ke všem fotografiím, stránkování a zvětšení na počítači i telefonu.
