@@ -7,8 +7,8 @@
 - [x] Doplnit šest služeb, úvodní popisek, přístup a popis pro vyhledávače bez změny úvodu.
 - [x] Zařadit skutečné nové fotografie do skupin a zachovat původní realizace.
 - [ ] Ověřit označení dvojic před/po s klientkou a zobrazit potvrzená srovnání — čeká na potvrzení příslušnosti fotografií klientkou.
-- [ ] Ověřit galerii, telefonní i počítačové rozložení a zachovaný formulář.
+- [x] Ověřit galerii, telefonní i počítačové rozložení a zachovaný formulář.
 
 # Přehledné portfolio
-- [ ] Nahradit dlouhý výpis malými tematickými náhledy a rozklikávacími galeriemi.
-- [ ] Ověřit přístup ke všem fotografiím, stránkování a zvětšení na počítači i telefonu.
+- [x] Nahradit dlouhý výpis malými tematickými náhledy a rozklikávacími galeriemi.
+- [x] Ověřit přístup ke všem fotografiím, stránkování a zvětšení na počítači i telefonu.
