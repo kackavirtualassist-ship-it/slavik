@@ -16,7 +16,7 @@ export function PortfolioGallery() {
           if (!cover) return null;
           return (
             <Button key={group.id} variant="ghost" onClick={() => setSelected(group)} aria-label={`Prohlédnout: ${group.title}`}
-              className="group block h-auto min-w-0 whitespace-normal rounded-none p-0 text-left text-d2-white hover:bg-transparent hover:text-d2-bronze focus-visible:ring-d2-bronze">
+              className="group block h-auto min-w-0 self-start whitespace-normal rounded-none p-0 text-left text-d2-white hover:bg-transparent hover:text-d2-bronze focus-visible:ring-d2-bronze">
               <div className="aspect-[4/3] overflow-hidden bg-d2-anthracite">
                 <img src={cover.src} alt={cover.alt} width={cover.w} height={cover.h} loading="lazy" className="h-full w-full object-contain transition-transform duration-500 motion-safe:group-hover:scale-[1.04]" />
               </div>
